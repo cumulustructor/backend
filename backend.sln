@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend", "backend.csproj", "{615732EB-575E-44ED-A277-12C3DE1B788E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14585D45-AB52-4DC9-8870-E180A2B45BE8} = {14585D45-AB52-4DC9-8870-E180A2B45BE8}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "schema", "..\schema\schema.csproj", "{14585D45-AB52-4DC9-8870-E180A2B45BE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{615732EB-575E-44ED-A277-12C3DE1B788E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615732EB-575E-44ED-A277-12C3DE1B788E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615732EB-575E-44ED-A277-12C3DE1B788E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615732EB-575E-44ED-A277-12C3DE1B788E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14585D45-AB52-4DC9-8870-E180A2B45BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14585D45-AB52-4DC9-8870-E180A2B45BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14585D45-AB52-4DC9-8870-E180A2B45BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14585D45-AB52-4DC9-8870-E180A2B45BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFA0DD96-D4A2-4030-A4D6-7689A8D598BF}
+	EndGlobalSection
+EndGlobal
