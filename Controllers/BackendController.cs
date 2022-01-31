@@ -44,5 +44,26 @@ namespace backend.Controllers
             }
             return DesignDocument;
         }
+
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Route("NewResource")]
+        public dynamic NewResource(string Cloud, string ResourceName)
+        {
+            string ClassId = "";
+            switch (Cloud.ToLower())
+            {
+                case "azure":
+                    ClassId = "MCD.Azure.Resources.Resource, schema";
+                break;
+            }
+            dynamic ClassResource = null;
+            Type CloudClass = Type.GetType(ClassId);
+            Type ClassType = (from i in CloudClass.Assembly.ExportedTypes
+                              where i.Namespace == CloudClass.Namespace && i.Name.ToLower() == ResourceName.ToLower()
+                              select i).First();
+            ClassResource = Activator.CreateInstance(ClassType);
+            return ClassResource;
+        }
     }
 }
